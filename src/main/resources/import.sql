@@ -1,3 +1,7 @@
+CREATE SCHEMA "base-test" ;
+
+
+
 --Empleados
 INSERT INTO empleado(nombre, apellido, puesto, fecha_nacimiento, salario) VALUES ("Adolfo", "Mendoza", "Gerente General", "1988-05-05", "20000.00")
 INSERT INTO empleado(nombre, apellido, puesto, fecha_nacimiento, salario) VALUES ("Josefina", "Calderón", "Gerente de Ventas", "1985-03-14", "16000.00")
