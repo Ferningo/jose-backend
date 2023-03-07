@@ -7,5 +7,11 @@ import java.util.List;
 
 public interface IDatosEnvioRepository extends CrudRepository<DatosEnvio,Integer> {
 
+    //Buscar mediante el idUsuario
     List<DatosEnvio> findAllDatosEnvioByFkIdUsuarioIdUsuario(int idUsuario);
+
+    //Buscar mediante correo
+    List<DatosEnvio> findAllDatosEnvioByFkIdUsuarioEmail(String email);
+
+
 }

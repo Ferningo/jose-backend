@@ -1,0 +1,524 @@
+{
+	"info": {
+		"_postman_id": "782388d3-7744-429e-a9b0-2d3dfc5f4a09",
+		"name": "Sabor Amor",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18410790"
+	},
+	"item": [
+		{
+			"name": "MétodoPago",
+			"item": [
+				{
+					"name": "Get metodo pago by user ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/metodo-pago/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"metodo-pago",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Método pago",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numTarjeta\": \"2222-6574-6187-888\",\r\n    \"titularTarjeta\": \"José Mora Dos\",\r\n    \"cvv\": 699,\r\n    \"fechaDeExpiracion\": \"05/23\",\r\n    \"fk_id_usuario\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/metodo-pago",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"metodo-pago"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Catálogo",
+			"item": [
+				{
+					"name": "Get all mermeladas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/catalogo/mermelada",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"catalogo",
+								"mermelada"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all salsas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/catalogo/salsa",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"catalogo",
+								"salsa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"LA OTRA SALSITA PIKOSITA\",\r\n    \"precio\": 70,\r\n    \"contenido\": 250,\r\n    \"descripcion\": \" Texto de descripcion\",\r\n    \"imgLink\": \"#\",\r\n    \"categoria\":\"salsa\",\r\n    \"spicy\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/catalogo",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"catalogo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update producto",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"idProducto\": 1,\r\n        \"nombre\": \"NUEVA SALSA PIKOSITA\",\r\n        \"precio\": 80,\r\n        \"contenido\": 10000000,\r\n        \"descripcion\": \" HOLI\",\r\n        \"imgLink\": \"img/salsa1.png\",\r\n        \"spicy\": \"2\",\r\n        \"categoria\": \"salsa\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/catalogo",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"catalogo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete producto by Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/catalogo/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"catalogo",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/catalogo",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"catalogo"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Datos Envío",
+			"item": [
+				{
+					"name": "Get datos envio by user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/datos-envio/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"datos-envio",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all datos envio",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/datos-envio",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"datos-envio"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all datos envio Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/datos-envio/email/juanverdadero@generation.mx",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"datos-envio",
+								"email",
+								"juanverdadero@generation.mx"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete datos envio ByIdEnvio",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/datos-envio/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"datos-envio",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete datos envio ByIdEnvio Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"nombre\": \"Prueba\",\r\n        \"apellido\": \"prueba\",\r\n        \"calle\": \"Avenida prueba\",\r\n        \"numExterior\": \"123\",\r\n        \"interior\": null,\r\n        \"cp\": 45625,\r\n        \"colonia\": \"San pedro\",\r\n        \"estado\": \"Jalisco\",\r\n        \"municipio\": \"Tlaquepaque\",\r\n        \"fkIdUsuario\": {\r\n            \"idUsuario\": 5\r\n        }\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/datos-envio",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"datos-envio"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update datos envio",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"idEnvio\": 4,\r\n        \"nombre\": \"Licho\",\r\n        \"apellido\": \"Quintana\",\r\n        \"calle\": \"Revolución\",\r\n        \"numExterior\": \"124\",\r\n        \"interior\": null,\r\n        \"cp\": 45625,\r\n        \"colonia\": \"San pedro\",\r\n        \"estado\": \"Jalisco\",\r\n        \"municipio\": \"Tlaquepaque\",\r\n        \"fk_id_usuario\": {\r\n            \"idUsuario\": 4\r\n        }\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/datos-envio",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"datos-envio"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuario",
+			"item": [
+				{
+					"name": "Get all users",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Venicio\",\r\n    \"lastName\": \"Fuentes\",\r\n    \"email\": \"venitzioo@gmial.com\",\r\n    \"password\": \"123\",\r\n    \"avatar\": \"https://randomuser.me/api/portraits/men/51.jpg\",\r\n    \"active\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/usuarios",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete usuario",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"nombre\": \"Juan\",\r\n        \"apellido\": \"NUEVO-APELLIDOOOOOOOOOOOOOOOOO\",\r\n        \"email\": \"juanverdadero@generation.mx\",\r\n        \"telefono\": \"2222893821\",\r\n        \"contrasenia\": \"123\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/usuarios/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"usuarios",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pedido",
+			"item": [
+				{
+					"name": "Get pedidos by user ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/pedido/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"pedido",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get pedido-producto by pedido ID Copy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/pedido-producto/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"pedido-producto",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create pedido",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fechaPedido\": \"xxxxx\",\r\n    \"fechaEntrega\": \"xxxxx\",\r\n    \"monto\": 92000,\r\n    \"pedidos\": [\r\n        {\r\n            \"pedidoProductoLlave\": {},\r\n            \"producto\": {\r\n                \"idProducto\": 3,\r\n                \"nombre\": \"MERMELADA DE MANGO\",\r\n                \"precio\": 190,\r\n                \"contenido\": 100,\r\n                \"descripcion\": \" Texto de descripcion\",\r\n                \"imgLink\": \"#\",\r\n                \"spicy\": \"2\",\r\n                \"categoria\": \"salsa\"\r\n            },\r\n            \"cantidad\": 9\r\n        }\r\n    ],\r\n    \"usuarioId\": {\r\n        \"idUsuario\": 2,\r\n        \"nombre\": \"Juan\",\r\n        \"apellido\": \"Herrera\",\r\n        \"email\": \"juanverdadero@generation.mx\",\r\n        \"telefono\": \"2222893821\",\r\n        \"contrasenia\": \"123\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/pedido/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"pedido",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Get pedidos by user ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/pedido/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pedido",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
