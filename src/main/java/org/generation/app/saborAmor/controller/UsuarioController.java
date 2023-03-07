@@ -1,5 +1,6 @@
 package org.generation.app.saborAmor.controller;
 
+import org.generation.app.saborAmor.dto.UsuarioDto;
 import org.generation.app.saborAmor.model.Usuario;
 import org.generation.app.saborAmor.service.IUsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,8 +11,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("api")
 @CrossOrigin
+@RequestMapping("api")
 public class UsuarioController {
 
     @Autowired
@@ -19,8 +20,25 @@ public class UsuarioController {
 
 
     @GetMapping("/usuarios")
-    public List<Usuario> getAllUsuarios(){
+    public List<Usuario> getAllUsuarios() {
         return usuarioService.getAllUsuarios();
+    }
+
+    @GetMapping("/usuarios/{id}") //localhost:8080/api/customers/2
+    public ResponseEntity<?> getUsuarioById(@PathVariable("id") int idUsuario) {
+        try {
+            return new ResponseEntity<UsuarioDto>(
+                    usuarioService.getUsuarioDtoById(idUsuario),
+                    HttpStatus.OK);
+        } catch (IllegalStateException e) {
+            return new ResponseEntity<String>(e.getMessage(), HttpStatus.NOT_FOUND);
+        }
+    }
+
+
+    @GetMapping("/usuarios/email/{email}")
+    public Usuario getUsuarioByEmail(@PathVariable("email") String email) {
+        return usuarioService.getUsuarioByEmail(email);
     }
 
     @PostMapping("usuarios")
@@ -31,20 +49,20 @@ public class UsuarioController {
                     HttpStatus.CREATED);
 
         } catch (IllegalStateException e) {
-            return new ResponseEntity<String>(e.getMessage() , HttpStatus.BAD_REQUEST );
+            return new ResponseEntity<String>(e.getMessage(), HttpStatus.BAD_REQUEST);
         }
 
     }
 
     @PutMapping("usuarios")
-    public ResponseEntity<?> updateCustomer(@RequestBody Usuario customer ){
+    public ResponseEntity<?> updateCustomer(@RequestBody Usuario customer) {
         try {
             return new ResponseEntity<Usuario>(
                     usuarioService.updateUsuario(customer),
                     HttpStatus.CREATED);
 
         } catch (IllegalStateException e) {
-            return new ResponseEntity<String>(e.getMessage() , HttpStatus.BAD_REQUEST );
+            return new ResponseEntity<String>(e.getMessage(), HttpStatus.BAD_REQUEST);
         }
     }
 
@@ -55,7 +73,7 @@ public class UsuarioController {
                     usuarioService.deleteUsuarioById(idCustomer),
                     HttpStatus.OK);
         } catch (IllegalStateException e) {
-            return new ResponseEntity<String>(e.getMessage() , HttpStatus.NOT_FOUND );
+            return new ResponseEntity<String>(e.getMessage(), HttpStatus.NOT_FOUND);
         }
     }
 
