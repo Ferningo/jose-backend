@@ -1,0 +1,501 @@
+{
+	"info": {
+		"_postman_id": "59b9f3ce-64b3-449f-85b7-9c627d4b202f",
+		"name": "PROD - Sabor Amor",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18410790"
+	},
+	"item": [
+		{
+			"name": "MétodoPago",
+			"item": [
+				{
+					"name": "Get metodo pago by user ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/metodo-pago/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"metodo-pago",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get metodo pago by user email",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/metodo-pago/email/juanverdadero@generation.mx",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"metodo-pago",
+								"email",
+								"juanverdadero@generation.mx"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all metodos pago",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/metodo-pago",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"metodo-pago"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete MetodoById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/metodo-pago/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"metodo-pago",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Método pago",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idTarjeta\": 4,\r\n    \"numTarjeta\": \"8374-6574-6127-234\",\r\n    \"titularTarjeta\": \"MODIFICADO\",\r\n    \"cvv\": 589,\r\n    \"fechaDeExpiracion\": \"06/28\",\r\n    \"fkIdUsuario\": {\r\n        \"idUsuario\": 5\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/metodo-pago",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"metodo-pago"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Método pago",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numTarjeta\": \"8374-6574-6127-2344\",\r\n    \"titularTarjeta\": \"Jorge Ocampo Dos\",\r\n    \"cvv\": 589,\r\n    \"fechaDeExpiracion\": \"06/28\",\r\n    \"fkIdUsuario\": {\r\n        \"idUsuario\": 6\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/metodo-pago",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"metodo-pago"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Catálogo",
+			"item": [
+				{
+					"name": "Get all mermeladas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/catalogo/mermelada",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"catalogo",
+								"mermelada"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all salsas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/catalogo/salsa",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"catalogo",
+								"salsa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"LA OTRA SALSITA PIKOSITA\",\r\n    \"precio\": 70,\r\n    \"contenido\": 250,\r\n    \"descripcion\": \" Texto de descripcion\",\r\n    \"imgLink\": \"#\",\r\n    \"categoria\":\"salsa\",\r\n    \"spicy\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/catalogo",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"catalogo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update producto",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"idProducto\": 1,\r\n        \"nombre\": \"NUEVA SALSA PIKOSITA\",\r\n        \"precio\": 80,\r\n        \"contenido\": 10000000,\r\n        \"descripcion\": \" HOLI\",\r\n        \"imgLink\": \"img/salsa1.png\",\r\n        \"spicy\": \"2\",\r\n        \"categoria\": \"salsa\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/catalogo",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"catalogo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete producto by Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/catalogo/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"catalogo",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/catalogo",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"catalogo"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Datos Envío",
+			"item": [
+				{
+					"name": "Get datos envio by user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/datos-envio/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"datos-envio",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all datos envio (pendiente implementar)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/datos-envio",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"datos-envio"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuario",
+			"item": [
+				{
+					"name": "Get all users",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Venicio\",\r\n    \"lastName\": \"Fuentes\",\r\n    \"email\": \"venitzioo@gmial.com\",\r\n    \"password\": \"123\",\r\n    \"avatar\": \"https://randomuser.me/api/portraits/men/51.jpg\",\r\n    \"active\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/usuarios",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete usuario",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"nombre\": \"Juan\",\r\n        \"apellido\": \"NUEVO-APELLIDOOOOOOOOOOOOOOOOO\",\r\n        \"email\": \"juanverdadero@generation.mx\",\r\n        \"telefono\": \"2222893821\",\r\n        \"contrasenia\": \"123\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/usuarios/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"usuarios",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pedido",
+			"item": [
+				{
+					"name": "Get pedidos by user ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/pedido/2",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"pedido",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get pedido-producto by pedido ID Copy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/pedido-producto/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"pedido-producto",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create pedido Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fechaPedido\": \"xxxxx\",\r\n    \"fechaEntrega\": \"xxxxx\",\r\n    \"monto\": 92000,\r\n    \"pedidos\": [\r\n        {\r\n            \"pedidoProductoLlave\": {},\r\n            \"producto\": {\r\n                \"idProducto\": 3,\r\n                \"nombre\": \"MERMELADA DE MANGO\",\r\n                \"precio\": 190,\r\n                \"contenido\": 100,\r\n                \"descripcion\": \" Texto de descripcion\",\r\n                \"imgLink\": \"#\",\r\n                \"spicy\": \"2\",\r\n                \"categoria\": \"salsa\"\r\n            },\r\n            \"cantidad\": 9\r\n        }\r\n    ],\r\n    \"usuarioId\": {\r\n        \"idUsuario\": 2,\r\n        \"nombre\": \"Juan\",\r\n        \"apellido\": \"Herrera\",\r\n        \"email\": \"juanverdadero@generation.mx\",\r\n        \"telefono\": \"2222893821\",\r\n        \"contrasenia\": \"123\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/pedido/",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"pedido",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "https://jose-backend-production.up.railway.app/api",
+			"type": "string"
+		}
+	]
+}
