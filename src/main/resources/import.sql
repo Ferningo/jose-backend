@@ -20,12 +20,12 @@
 --
 --
 ----Productos
-----INSERT INTO producto(nombre, precio, contenido, img_link, descripcion,spicy,categoria) VALUES ("MI SUPER SALSITA",70,250,"#"," Texto de descripcion","3","salsa");
-----INSERT INTO producto(nombre, precio, contenido, img_link, descripcion,spicy,categoria) VALUES ("MI MERMELADITA",190,100,"#"," Texto de descripcion","3","mermelada");
-----INSERT INTO producto(nombre, precio, contenido, img_link, descripcion,spicy,categoria) VALUES ("SALSA TLALPENIA",190,100,"#"," Texto de descripcion","2","salsa");
-----INSERT INTO producto(nombre, precio, contenido, img_link, descripcion,spicy,categoria) VALUES ("SALSA DE SHILE DE ARBOL",190,100,"#"," Texto de descripcion","2","salsa");
-----INSERT INTO producto(nombre, precio, contenido, img_link, descripcion,spicy,categoria) VALUES ("MERMELADA DE MANGO",190,100,"#"," Texto de descripcion","2","mermelada");
-----
+--INSERT INTO producto(nombre, precio, contenido, img_link, descripcion,spicy,categoria) VALUES ("MI SUPER SALSITA",70,250,"#"," Texto de descripcion","3","salsa");
+--INSERT INTO producto(nombre, precio, contenido, img_link, descripcion,spicy,categoria) VALUES ("MI MERMELADITA",190,100,"#"," Texto de descripcion","3","mermelada");
+--INSERT INTO producto(nombre, precio, contenido, img_link, descripcion,spicy,categoria) VALUES ("SALSA TLALPENIA",190,100,"#"," Texto de descripcion","2","salsa");
+--INSERT INTO producto(nombre, precio, contenido, img_link, descripcion,spicy,categoria) VALUES ("SALSA DE SHILE DE ARBOL",190,100,"#"," Texto de descripcion","2","salsa");
+--INSERT INTO producto(nombre, precio, contenido, img_link, descripcion,spicy,categoria) VALUES ("MERMELADA DE MANGO",190,100,"#"," Texto de descripcion","2","mermelada");
+--
 --
 ----Pedido
 --INSERT INTO pedido (fecha_entrega,fecha_pedido,monto,usuario_id) VALUES ("9 de de Julio","3 de Marzo",500,1);

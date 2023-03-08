@@ -13,6 +13,8 @@ public interface IPedidoService {
 
     public Pedido savePedido(Pedido pedido);
 
+    public List<PedidoProducto> findAllByUsuarioId(int usuarioId);
+
 
 
 

@@ -29,4 +29,11 @@ public class PedidoService implements IPedidoService {
     public Pedido savePedido(Pedido pedido) {
         return pedidoRepository.save(pedido);
     }
+
+    @Override
+    public List<PedidoProducto> findAllByUsuarioId(int usuarioId) {
+        return null;
+    }
+
+
 }

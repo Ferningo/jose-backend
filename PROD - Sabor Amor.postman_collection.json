@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "59b9f3ce-64b3-449f-85b7-9c627d4b202f",
-		"name": "PROD - Sabor Amor",
+		"_postman_id": "a5f5e780-1e83-4a13-8453-ea75b319ed51",
+		"name": "Sabor Amor DTO",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "18410790"
 	},
@@ -28,102 +28,13 @@
 					"response": []
 				},
 				{
-					"name": "Get metodo pago by user email",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{baseURL}}/metodo-pago/email/juanverdadero@generation.mx",
-							"host": [
-								"{{baseURL}}"
-							],
-							"path": [
-								"metodo-pago",
-								"email",
-								"juanverdadero@generation.mx"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Get all metodos pago",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{baseURL}}/metodo-pago",
-							"host": [
-								"{{baseURL}}"
-							],
-							"path": [
-								"metodo-pago"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Delete MetodoById",
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{baseURL}}/metodo-pago/1",
-							"host": [
-								"{{baseURL}}"
-							],
-							"path": [
-								"metodo-pago",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Update Método pago",
-					"request": {
-						"method": "PUT",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"idTarjeta\": 4,\r\n    \"numTarjeta\": \"8374-6574-6127-234\",\r\n    \"titularTarjeta\": \"MODIFICADO\",\r\n    \"cvv\": 589,\r\n    \"fechaDeExpiracion\": \"06/28\",\r\n    \"fkIdUsuario\": {\r\n        \"idUsuario\": 5\r\n    }\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{baseURL}}/metodo-pago",
-							"host": [
-								"{{baseURL}}"
-							],
-							"path": [
-								"metodo-pago"
-							]
-						}
-					},
-					"response": []
-				},
-				{
 					"name": "Create Método pago",
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"numTarjeta\": \"8374-6574-6127-2344\",\r\n    \"titularTarjeta\": \"Jorge Ocampo Dos\",\r\n    \"cvv\": 589,\r\n    \"fechaDeExpiracion\": \"06/28\",\r\n    \"fkIdUsuario\": {\r\n        \"idUsuario\": 6\r\n    }\r\n}",
+							"raw": "{\r\n    \"numTarjeta\": \"2222-6574-6187-8836479\",\r\n    \"titularTarjeta\": \"José Mora Dos\",\r\n    \"cvv\": 699,\r\n    \"fechaDeExpiracion\": \"05/23\",\r\n    \"fk_id_usuario\": 2\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -250,11 +161,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseURL}}/catalogo/1",
+							"raw": "localhost:8080/api/catalogo/1",
 							"host": [
-								"{{baseURL}}"
+								"localhost"
 							],
+							"port": "8080",
 							"path": [
+								"api",
 								"catalogo",
 								"1"
 							]
@@ -290,13 +203,65 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/api/datos-envio/1",
+							"raw": "{{baseURL}}/datos-envio/2",
 							"host": [
-								"localhost"
+								"{{baseURL}}"
 							],
-							"port": "8080",
 							"path": [
-								"api",
+								"datos-envio",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all datos envio",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/datos-envio",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"datos-envio"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all datos envio Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/datos-envio/email/juanverdadero@generation.mx",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"datos-envio",
+								"email",
+								"juanverdadero@generation.mx"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete datos envio ByIdEnvio",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/datos-envio/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
 								"datos-envio",
 								"1"
 							]
@@ -305,18 +270,51 @@
 					"response": []
 				},
 				{
-					"name": "Get all datos envio (pendiente implementar)",
+					"name": "Delete datos envio ByIdEnvio Copy",
 					"request": {
-						"method": "GET",
+						"method": "POST",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"nombre\": \"Prueba\",\r\n        \"apellido\": \"prueba\",\r\n        \"calle\": \"Avenida prueba\",\r\n        \"numExterior\": \"123\",\r\n        \"interior\": null,\r\n        \"cp\": 45625,\r\n        \"colonia\": \"San pedro\",\r\n        \"estado\": \"Jalisco\",\r\n        \"municipio\": \"Tlaquepaque\",\r\n        \"fkIdUsuario\": {\r\n            \"idUsuario\": 5\r\n        }\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
-							"raw": "localhost:8080/api/datos-envio",
+							"raw": "{{baseURL}}/datos-envio",
 							"host": [
-								"localhost"
+								"{{baseURL}}"
 							],
-							"port": "8080",
 							"path": [
-								"api",
+								"datos-envio"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update datos envio",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"idEnvio\": 4,\r\n        \"nombre\": \"Licho\",\r\n        \"apellido\": \"Quintana\",\r\n        \"calle\": \"Revolución\",\r\n        \"numExterior\": \"124\",\r\n        \"interior\": null,\r\n        \"cp\": 45625,\r\n        \"colonia\": \"San pedro\",\r\n        \"estado\": \"Jalisco\",\r\n        \"municipio\": \"Tlaquepaque\",\r\n        \"fk_id_usuario\": {\r\n            \"idUsuario\": 4\r\n        }\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/datos-envio",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
 								"datos-envio"
 							]
 						}
@@ -346,6 +344,63 @@
 							}
 						},
 						"url": {
+							"raw": "{{baseURL}}/usuarios",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get usuario By email",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Venicio\",\r\n    \"lastName\": \"Fuentes\",\r\n    \"email\": \"venitzioo@gmial.com\",\r\n    \"password\": \"123\",\r\n    \"avatar\": \"https://randomuser.me/api/portraits/men/51.jpg\",\r\n    \"active\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/usuarios/email/juanverdadero@generation.mx",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"usuarios",
+								"email",
+								"juanverdadero@generation.mx"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Usuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Juan\",\r\n    \"apellido\": \"Castro\",\r\n    \"email\": \"juancastro@generation.mx\",\r\n    \"telefono\": \"2222893821\",\r\n    \"contrasenia\": \"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
 							"raw": "localhost:8080/api/usuarios",
 							"host": [
 								"localhost"
@@ -353,6 +408,64 @@
 							"port": "8080",
 							"path": [
 								"api",
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get usuario by idUsuario DTO",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Venicio\",\r\n    \"lastName\": \"Fuentes\",\r\n    \"email\": \"venitzioo@gmial.com\",\r\n    \"password\": \"123\",\r\n    \"avatar\": \"https://randomuser.me/api/portraits/men/51.jpg\",\r\n    \"active\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/usuarios/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"usuarios",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get usuario by idUsuario DTO Copy",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"idUsuario\": 4,\r\n        \"nombre\": \"Luis\",\r\n        \"apellido\": \"Sondoval\",\r\n        \"email\": \"emo@generation.mx\",\r\n        \"telefono\": \"3194637593\",\r\n        \"contrasenia\": \"123\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/usuarios",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
 								"usuarios"
 							]
 						}
@@ -399,13 +512,15 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{baseURL}}/pedido/2",
+							"raw": "localhost:8080/api/pedido/1",
 							"host": [
-								"{{baseURL}}"
+								"localhost"
 							],
+							"port": "8080",
 							"path": [
+								"api",
 								"pedido",
-								"2"
+								"1"
 							]
 						}
 					},
@@ -442,7 +557,7 @@
 					"response": []
 				},
 				{
-					"name": "Create pedido Copy",
+					"name": "Create pedido",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -456,11 +571,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseURL}}/pedido/",
+							"raw": "localhost:8080/api/pedido/",
 							"host": [
-								"{{baseURL}}"
+								"localhost"
 							],
+							"port": "8080",
 							"path": [
+								"api",
 								"pedido",
 								""
 							]
@@ -469,6 +586,23 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "Get pedidos by user ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/catalogo",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"catalogo"
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"event": [
@@ -494,7 +628,7 @@
 	"variable": [
 		{
 			"key": "baseURL",
-			"value": "https://jose-backend-production.up.railway.app/api",
+			"value": "https://sabor-amor.up.railway.app/api",
 			"type": "string"
 		}
 	]

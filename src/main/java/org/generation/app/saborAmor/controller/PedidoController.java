@@ -19,8 +19,10 @@ public class PedidoController {
 
     @GetMapping("/pedido/{id}")
     public List<Pedido> getAllPedidosByUsuarioId(@PathVariable("id") int idUsuario){
-        return pedidoService.getAllPedidoProductoByPedidoId(idUsuario);
+        return pedidoService.getAllPedidosByUsuarioId(idUsuario);
     }
+
+
 
     @PostMapping("/pedido/")
     public Pedido createPedido(@RequestBody Pedido newPedidoData){
